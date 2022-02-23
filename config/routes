@@ -1,0 +1,14 @@
+-- By default this file is used by `parseRoutesFile` in Foundation.hs
+-- Syntax for this file here: https://www.yesodweb.com/book/routing-and-handlers
+
+/static StaticR Static appStatic
+/auth AuthR Auth getAuth
+
+/api/vinyls ViniesR POST GET
+/api/vinyls/#VinylId VinylR GET DELETE PUT
+
+/api/artists ArtistsR GET POST
+/api/artists/#ArtistId ArtistR GET PUT DELETE
+
+
+/api/categories CategoriesR GET POST

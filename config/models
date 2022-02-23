@@ -1,0 +1,23 @@
+User
+    ident Text
+    password Text Maybe
+    UniqueUser ident
+    deriving Typeable
+Email
+    email Text
+    userId UserId Maybe
+    verkey Text Maybe
+    UniqueEmail email
+
+Categorie json
+    name Text
+
+Artist json
+    name Text
+    age Int
+
+Vinyl json
+    name Text
+    categorie CategorieId
+    artist ArtistId Maybe
+    UniqueNameArtist name artist !force
